@@ -1,25 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Book discoTitanic = new Book("Disco Titanic");
-        Author author = new Author("Radu Pavel Gheo");
-        discoTitanic.addAuthor(author);
+        Book noapteBuna = new Book("Noapte buna, copii!");
+        Author rpGheo = new Author("Radu Pavel Gheo");
+        noapteBuna.addAuthor(rpGheo);
 
-        Chapter chapter1 = discoTitanic.createChapter("Capitolul 1");
-        SubChapter subChapter1 = chapter1.createSubChapter("Subcapitolul 1.1");
+        Section cap1 = new Section("Capitolul 1");
+        Section cap11 = new Section("Capitolul 1.1");
+        Section cap111 = new Section("Capitolul 1.1.1");
 
-        subChapter1.addParagraph("Acesta este paragraful 1");
-        subChapter1.addParagraph("Acesta este paragraful 2.0");
-        subChapter1.addImage("Imagine 1");
-        subChapter1.addTable("Tabel 1");
+        noapteBuna.addContent(new Paragraph("Multumesc celor care ..."));
+        noapteBuna.addContent(cap1);
 
-        // Adăugați un alt subcapitol în capitol1
-        SubChapter subChapter2 = chapter1.createSubChapter("Subcapitolul 1.2");
-        subChapter2.addParagraph("Acesta este paragraful 1 din Subcapitolul 1.2");
-        subChapter2.addImage("Imagine 2 din Subcapitolul 1.2");
-        subChapter2.addTable("Tabel 2 din Subcapitolul 1.2");
+        cap1.add(new Paragraph("Moto capitol"));
+        cap1.add(cap11);
+        cap11.add(new Paragraph("Text from subchapter 1.1"));
+        cap11.add(cap111);
 
-        discoTitanic.print();
+        cap111.add(new Paragraph("Text from subchapter 1.1.1"));
+        cap111.add(new Image("Image from subchapter 1.1.1"));
+
+        noapteBuna.print();
     }
 }
+
 
 
