@@ -1,12 +1,13 @@
-public class Paragraph {
-    String content;
+class Paragraph implements Element {
+    private String text;
 
-    public Paragraph(String content) {
-        this.content = content;
+    public Paragraph(String text) {
+        this.text = text;
     }
 
     public void print() {
-        System.out.println("Paragraph: " + content);
+        System.out.println("Paragraph: " + text);
     }
 }
+
 
