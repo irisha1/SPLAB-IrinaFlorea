@@ -8,7 +8,7 @@ public class Main {
         SubChapter subChapter1 = chapter1.createSubChapter("Subcapitolul 1.1");
 
         subChapter1.addParagraph("Acesta este paragraful 1");
-        subChapter1.addParagraph("Acesta este paragraful 2");
+        subChapter1.addParagraph("Acesta este paragraful 2.0");
         subChapter1.addImage("Imagine 1");
         subChapter1.addTable("Tabel 1");
 
