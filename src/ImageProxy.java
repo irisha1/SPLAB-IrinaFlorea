@@ -14,10 +14,13 @@ class ImageProxy implements Element {
     }
 
     private Image loadImage() {
-        // Simulate loading the image with URL
+
         System.out.println("Loading image from URL: " + url);
-        // Într-o implementare reală, aici ai putea crea un obiect Image cu URL-ul
         return new Image("Image from URL: " + url);
+    }
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
     }
 }
 

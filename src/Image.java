@@ -18,5 +18,10 @@ class Image implements Element{
     public void print() {
         System.out.println("Image: " + content);
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
+    }
 }
 

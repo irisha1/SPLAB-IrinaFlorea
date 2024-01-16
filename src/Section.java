@@ -19,4 +19,16 @@ class Section implements Element {
             element.print();
         }
     }
+    public List<Element> getElements() {
+        return elements;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
 }
