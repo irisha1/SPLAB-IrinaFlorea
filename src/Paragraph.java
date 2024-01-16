@@ -8,6 +8,14 @@ class Paragraph implements Element {
     public void print() {
         System.out.println("Paragraph: " + text);
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
+    }
+    public void accept(RenderContentVisitor renderVisitor) {
+        renderVisitor.visitParagraph(this);
+    }
 }
 
 
